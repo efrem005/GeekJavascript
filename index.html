@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/861689887d.js"></script>
+    <title>Javscript</title>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./img/logo.png" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-md-between text-sm-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav" id="menuList">
+            <!-- menu list -->
+            <!-- <li class="nav-item">
+            <button type="button" class="btn btn-success m-1 px-3">Товары</button>
+          </li> -->
+            <!-- menu list -->
+          </ul>
+          <div>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <div class="btn-group" role="group">
+                <button
+                  id="btnGroupDrop1"
+                  type="button"
+                  class="btn btn-success"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+                <ul
+                  class="dropdown-menu cartList"
+                  aria-labelledby="btnGroupDrop1"
+                >
+                  <ul class="p-0 text-center" id="cartList">
+                    <!-- cartBasket -->
+                    <span class="py-2">Карзина пуста</span>
+                    <hr>
+                    <!-- <div class="d-flex flex-wrap">
+                      
+                      <img src="https://imgholder.ru/215x230/8493a8/adb9ca&text=IMAGE+HOLDER&font=kelson" alt="carts" />
+                      <div class="cart__menu_items-content">
+                        <h2>The default name</h2>
+                        <span>S</span>
+                        <p>1 x $ 100</p>
+                      </div>
+                      <button>
+                        <i class="fas fa-times-circle"></i>
+                      </button>
+                    </div> -->
+                    <!-- cartBasket -->
+                  </ul>
+                  <div class="p-0 text-center" id="cartPrice">
+                    <!-- <div>Dropdown link</div> -->
+                    <span class="py-2">Количество 0 цена 0 $</span>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="btn-group" role="group">
+                <button
+                  id="btnGroupDrop1"
+                  type="button"
+                  class="btn btn-success dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Меню
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-start"
+                  style="min-width: 114px; left: -32px"
+                  aria-labelledby="btnGroupDrop1"
+                >
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson1"
+                    >
+                      Урок №1
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson2"
+                    >
+                      Урок №2
+                    </button>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson3"
+                      disabled
+                    >
+                      Урок №3
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson4"
+                      disabled
+                    >
+                      Урок №4
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson5"
+                      disabled
+                    >
+                      Урок №5
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson6"
+                      disabled
+                    >
+                      Урок №6
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson7"
+                      disabled
+                    >
+                      Урок №7
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-center"
+                      type="button"
+                      id="lesson8"
+                      disabled
+                    >
+                      Урок №8
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row py-3" id="mainList">
+
+
+        <!-- // -->
+        <!-- <div class="col-3">
+        <div class="card">
+          <img src="http://dummyimage.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> -->
+        <!-- // -->
+      </div>
+    </main>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./lesson/index.js" async></script>
+    <script src="./lesson1/index.js" async></script>
+    <script src="./lesson2/index.js" async></script>
+    <script src="./lesson2/humburger.js"></script>
+    <script></script>
+  </body>
+</html>
