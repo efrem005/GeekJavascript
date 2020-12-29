@@ -5,8 +5,8 @@ function lesson1() {
   cleanerMenu() // чистка меню
   cleanerBasket() // чистка карзины
   
-  /*
-  /шаблон товара
+  /**
+  * шаблон товара
   */
   const renderGoodsItems = ({img = DEFAULT_IMG, title = DEFAULT_TITLE, price = DEFAULT_PRICE}) => `
   <div class="col-lg-3 mb-4 col-md-4 col-sm-6">
@@ -20,8 +20,8 @@ function lesson1() {
     </div>
   </div>`
   
-  /*
-  / вывод товара на страницу
+  /**
+  * вывод товара на страницу
   */
   mainList.innerHTML = productObject.map(item => renderGoodsItems(item)).join('');
 

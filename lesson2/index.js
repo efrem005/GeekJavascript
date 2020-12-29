@@ -1,9 +1,9 @@
-/*
-/Товары кнопка
+/**
+*Товары кнопка
 */
 function product() {
-  landingPage() // чистка страницы
-  cleanerBasket() // чистка карзины
+  landingPage() /** чистка страницы **/
+  cleanerBasket() /** чистка карзины **/
 
   class Catalog {
     constructor(goods = {}) {
@@ -11,29 +11,24 @@ function product() {
       this.totalPrice()
     }
 
-    /*
-    / шаблон удаления товара
+    /**
+    * шаблон удаления товара
     */
     removeItem(id) {
-      this.goods.splice(id, 1) // splice(id, 0, item4, ...items)
+      this.goods.splice(id, 1) /** splice(id, 0, item4, ...items) **/
     }
 
-    /*
-    / общая цена товаров
+    /**
+    * общая цена товаров
     */
     totalPrice() {
       return this.goods.reduce((acc, el) => acc + el.price, 0)
     }
 
-    /*
-    / шаблон карточки товара
+    /**
+    * шаблон карточки товара
     */
-    product({
-      id,
-      img = DEFAULT_IMG,
-      title = DEFAULT_TITLE,
-      price = DEFAULT_PRICE,
-    }) {
+    product({ id, img = DEFAULT_IMG, title = DEFAULT_TITLE, price = DEFAULT_PRICE }) {
       return `<div class="col-lg-3 mb-4 col-md-4 col-sm-6">
         <div class="card">
           <img src=${img} class="card-img-top" alt="...">
@@ -46,30 +41,33 @@ function product() {
       </div>`
     }
 
-    /*
-    / рендер на страницу
+    /**
+    * рендер на страницу
     */
     render() {
       mainList.innerHTML = this.goods.map((el) => this.product(el)).join('')
-      cartPrice.innerHTML = `<span>Количество ${
-        this.goods.length
-      } цена ${this.totalPrice()} $</span>`
+      cartPrice.innerHTML = 
+      `<div class="card">
+        <div class="card-body">
+          Количество ${this.goods.length} цена ${this.totalPrice()} $
+        </div>
+      </div>`
     }
   }
 
-  /*
-  / класса Catalog 
+  /**
+  * класса Catalog
   */
   const catalog = new Catalog(productObject)
 
-  /*
-  / вызов метода render 
+  /**
+  * вызов метода render
   */
   catalog.render()
 }
 
-/*
-/Бургер кнопка
+/**
+* Бургер кнопка
 */
 function burger() {
   landingPage() // чистка страницы
@@ -78,8 +76,8 @@ function burger() {
   hamburg.render()
 }
 
-/*
-/ объект Hamburger
+/**
+* объект Hamburger
 */
 const objectBurger = {
   small: {
@@ -119,15 +117,15 @@ const objectBurger = {
   },
 }
 
-/*
-  / Класс Hamburger
-  */
+/**
+* Класс Hamburger
+*/
 class Hamburger {
-  /*
-  / this.size вся информация о гамбургеров
-  / this.stuffing наименования видов начинок
-  / this.price общая цена
-  / this.calories калории
+  /**
+  * this.size вся информация о гамбургеров
+  * this.stuffing наименования видов начинок
+  * this.price общая цена
+  * this.calories калории
   */
   constructor(bur) {
     this.size = bur //
@@ -136,8 +134,8 @@ class Hamburger {
     this.calories = 0
   }
 
-  /*
-  / записываем какой гамбургер
+  /**
+  * записываем какой гамбургер
   */
   sizeHambur(size) {
     if (size === 'big') this.size = { ...objectBurger[size] }
@@ -145,24 +143,24 @@ class Hamburger {
     this.render()
   }
 
-  /*
-  / плюсуем цену
+  /**
+  * плюсуем цену
   */
   setPrice(i) {
     this.price += objectBurger[i].price
     this.stuffing.push(objectBurger[i].name)
   }
 
-  /*
-  / плюсуем калории
+  /**
+  * плюсуем калории
   */
   setCalories(i) {
     this.calories += objectBurger[i].calories
     this.render()
   }
 
-  /*
-  / выбор начинок
+  /**
+  * выбор начинок
   */
   dataList(i) {
     switch (i) {
@@ -194,8 +192,8 @@ class Hamburger {
     }
   }
 
-  /*
-  / шаблон карзины
+  /**
+  * шаблон карзины
   */
   cartHtml() {
     return `
@@ -204,15 +202,15 @@ class Hamburger {
       <span>калорий: ${this.calories + this.size['calories']}</span><hr>`
   }
 
-  /*
-  / шаблон начинок
+  /**
+  * шаблон начинок
   */
   cartStuffing() {
     return this.stuffing.map((el) => `<div class="pb-2">${el}</div>`)
   }
 
-  /*
-  / рендер на страницу и в консоль
+  /**
+  * рендер на страницу и в консоль
   */
   render() {
     console.log(this.size['name'])
@@ -224,13 +222,13 @@ class Hamburger {
   }
 }
 
-/*
-/ класса гамбургер 
+/**
+* класса гамбургер
 */
 const hamburg = new Hamburger({ name: 'Пусто', price: 0, calories: 0 })
 
-/*
-/ обрабочик событий гамбургер
+/**
+* обрабочик событий гамбургер
 */
 mainList.addEventListener('click', (e) => {
   const id = e.target.id
@@ -242,31 +240,31 @@ mainList.addEventListener('click', (e) => {
 /*
 / Класс корзины
 */
-class Basket {
-  constructor() {
+// class Basket {
+  // constructor() {
     /*
       / Содержимое корзины
       */
-    this.state = []
-  }
+    // this.state = []
+  // }
 
   /*
   / Добавление товара в корзину
   */
-  addItem() {}
+  // addItem() {}
 
   /*
   /Удаление товара из корзины
   */
-  deleteItem() {}
+  // deleteItem() {}
 
   /*
   / Считаем стоимость и количество товаров в корзине
   */
-  totalPrice() {}
+  // totalPrice() {}
 
   /*
   / Вывод содержимого корзины на страницу
   */
-  render() {}
-}
+  // render() {}
+// }
