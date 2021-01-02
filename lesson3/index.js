@@ -157,7 +157,11 @@ function lesson3() {
           good.renderHtml(cartList)
         })
       } else {
-        cartList.innerHTML = 'Нет товаров в корзине!'
+        cartList.innerHTML = `<div class="card">
+                  <div class="card-body">
+                    Карзина пуста
+                  </div>
+                </div>`
       }
     }
   }
@@ -195,7 +199,7 @@ function lesson3() {
           <div class="card-body">
             <h5 class="card-title">${this.title}</h5>
             <p class="card-text">${this.price}</p>
-            <button class="btn btn-success"><i class="fas fa-cart-arrow-down"></i> купить</button>
+            <button class="btn btn-success"><i class="fad fa-cart-arrow-down"></i> купить</button>
           </div>
         </div>`
 
