@@ -12,3 +12,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.green {
+  outline: 4px solid darkgreen;
+}
+.green:focus {
+  outline: 4px solid darkgreen;
+}
+
+.red {
+  outline: 4px solid darkred;
+}
+.red:focus {
+  outline: 4px solid darkred;
+}

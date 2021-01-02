@@ -33,7 +33,7 @@ const landingPage = () => {
 const cleanerBasket = () => {
   cartList.innerHTML = `<div class="card mb-1">
   <div class="card-body">
-    Карзина пуста
+    Корзина пуста
   </div>
 </div>`
   cartPrice.innerHTML = `<div class="card">
@@ -60,14 +60,14 @@ const headerMenu = ({ title, classClick }) => `
 * Для урока №2
 */
 document.getElementById('lesson2').addEventListener('click', lesson2)
-function lesson2() {
-  mainList.innerHTML = ''
+  function lesson2() {
+    mainList.innerHTML = ''
 
-  const menuRender = menul => menul.map((el) => headerMenu(el))
-  menuList.innerHTML = menuRender(menuLessonTwo).join('')
-  document.getElementById('product').addEventListener('click', product)
-  document.getElementById('burger').addEventListener('click', burger)
-}
+    const menuRender = menul => menul.map((el) => headerMenu(el))
+    menuList.innerHTML = menuRender(menuLessonTwo).join('')
+    document.getElementById('product').addEventListener('click', product)
+    document.getElementById('burger').addEventListener('click', burger)
+  }
   
 /**
 * Кнопки для урока 2
@@ -83,6 +83,50 @@ const menuLessonTwo = [
 document.getElementById('lesson3').addEventListener('click', () => {
   lesson3()
 })
+
+/**
+ * Для урока №4
+ */
+document.getElementById('lesson4').addEventListener('click', lesson4)
+  function lesson4() {
+    mainList.innerHTML = ''
+
+    const menuRender = menul => menul.map((el) => headerMenu(el))
+    menuList.innerHTML = menuRender(menuLessonFour).join('')
+    document.getElementById('fourText').addEventListener('click', fourText)
+    document.getElementById('fourSearch').addEventListener('click', fourSearch)
+    document.getElementById('fourForm').addEventListener('click', fourForm)
+  }
+
+/**
+ * Кнопки для урока 4
+ */
+const menuLessonFour = [
+  { title: 'Текст', classClick: 'fourText' },
+  { title: 'Поиск', classClick: 'fourSearch' },
+  { title: 'Форма', classClick: 'fourForm' }
+]
+
+/**
+ * Для урока №5
+ */
+document.getElementById('lesson5').addEventListener('click', lesson5)
+function lesson5() {
+  mainList.innerHTML = ''
+
+  const menuRender = menul => menul.map((el) => headerMenu(el))
+  menuList.innerHTML = menuRender(menuLessonFive).join('')
+  document.getElementById('fiveSearch').addEventListener('click', fiveSearch)
+  document.getElementById('fiveForm').addEventListener('click', fiveForm)
+}
+
+/**
+ * Кнопки для урока 5
+ */
+const menuLessonFive = [
+  { title: 'Поиск', classClick: 'fiveSearch' },
+  { title: 'СКОРО', classClick: 'fiveForm' }
+]
 
 /**
 * Объект товаров
@@ -142,6 +186,41 @@ const productObject = [
     "img":
     "https://raw.githubusercontent.com/efrem005/Geekbrains/Geekbrains/img/layer-9.jpg",
     "title": "Mango People T-shirt",
+    "price": 118.0
+  }
+];
+
+const appleObject = [
+  {
+    "title": "Яблоко",
+    "price": 32.0
+  },
+  {
+    "title": "Апельсин",
+    "price": 54.0
+  },
+  {
+    "title": "Абрикос",
+    "price": 64.0
+  },
+  {
+    "title": "Мандарин",
+    "price": 76.0
+  },
+  {
+    "title": "Арбуз",
+    "price": 82.0
+  },
+  {
+    "title": "Дыня",
+    "price": 94.0
+  },
+  {
+    "title": "Вишня",
+    "price": 106.0
+  },
+  {
+    "title": "Ананас",
     "price": 118.0
   }
 ];
