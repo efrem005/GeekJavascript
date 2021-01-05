@@ -7,6 +7,7 @@ const cartPrice = document.getElementById('cartPrice') /** корзина цен
 * URL json
 */
 const URL_GIT = 'https://raw.githubusercontent.com/efrem005/json/master/responses/jsonProduct.json'
+const URL_GIT_FRU = 'https://raw.githubusercontent.com/efrem005/json/master/responses/jsonFruits.json'
 
 
 /**
@@ -111,22 +112,6 @@ const menuLessonFour = [
  * Для урока №5
  */
 document.getElementById('lesson5').addEventListener('click', lesson5)
-function lesson5() {
-  mainList.innerHTML = ''
-
-  const menuRender = menul => menul.map((el) => headerMenu(el))
-  menuList.innerHTML = menuRender(menuLessonFive).join('')
-  document.getElementById('fiveSearch').addEventListener('click', fiveSearch)
-  document.getElementById('fiveForm').addEventListener('click', fiveForm)
-}
-
-/**
- * Кнопки для урока 5
- */
-const menuLessonFive = [
-  { title: 'Поиск', classClick: 'fiveSearch' },
-  { title: 'СКОРО', classClick: 'fiveForm' }
-]
 
 /**
 * Объект товаров
@@ -190,6 +175,9 @@ const productObject = [
   }
 ];
 
+/**
+ * Объект фрукты
+ */
 const appleObject = [
   {
     "title": "Яблоко",

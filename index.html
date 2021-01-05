@@ -11,6 +11,7 @@
   <title>Javscript</title>
 </head>
 <body>
+<div id="app">
 <header class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="./index.html">
@@ -20,16 +21,12 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-md-between text-sm-center" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-md-between text-sm-center text-end" id="navbarNav">
       <ul class="navbar-nav" id="menuList">
         <!-- menu list -->
       </ul>
       <div>
-        <div
-                class="btn-group"
-                role="group"
-                aria-label="Button group with nested dropdown"
-        >
+        <div class="btn-group mt-1 m-sm-0" role="group" aria-label="Button group with nested dropdown">
           <div class="btn-group" role="group">
             <button id="btnGroupDrop" type="button" class="btn btn-success" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fad fa-shopping-cart"></i>
@@ -94,11 +91,12 @@
     </div>
   </div>
 </header>
-<main class="container">
-  <div class="row py-3" id="mainList">
+<main class="container py-3">
+  <div class="row flex-column flex-sm-row align-items-center" id="mainList">
     <!--mainList-->
   </div>
 </main>
+</div>
 
 <script src="./js/bootstrap.min.js"></script>
 <script src="./lesson/index.js" async></script>
@@ -108,6 +106,5 @@
 <script src="./lesson3/index.js"></script>
 <script src="./lesson4/index.js"></script>
 <script src="./lesson5/index.js"></script>
-<script></script>
 </body>
 </html>
