@@ -114,6 +114,11 @@ const menuLessonFour = [
 document.getElementById('lesson5').addEventListener('click', lesson5)
 
 /**
+ * Для урока №6
+ */
+document.getElementById('lesson6').addEventListener('click', lesson6)
+
+/**
 * Объект товаров
 */
 const productObject = [
