@@ -1,0 +1,254 @@
+[
+    {
+        "id": 1,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/avokado.jpg",
+        "title": "Авокадо",
+        "price": 82.0,
+        "count": 1
+    },
+    {
+        "id": 2,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/arb.png",
+        "title": "Арбуз",
+        "price": 17.0,
+        "count": 1
+    },
+    {
+        "id": 3,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/ayva.jpg",
+        "title": "Айва",
+        "price": 120.0,
+        "count": 1
+    },
+    {
+        "id": 4,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/abrikos.jpg",
+        "title": "Абрикос",
+        "price": 72.0,
+        "count": 1
+    },
+    {
+        "id": 5,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/pine.jpg",
+        "title": "Ананас",
+        "price": 95.0,
+        "count": 1
+    },
+    {
+        "id": 6,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/anagold.jpg",
+        "title": "Ананас GOLD",
+        "price": 140.0,
+        "count": 1
+    },
+    {
+        "id": 7,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/ap.jpg",
+        "title": "Апельсины",
+        "price": 68.0,
+        "count": 1
+    },
+    {
+        "id": 8,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/ban.jpg",
+        "title": "Бананы",
+        "price": 68.0,
+        "count": 1
+    },
+    {
+        "id": 9,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/vin.jpg",
+        "title": "Виноград белый",
+        "price": 102.0,
+        "count": 1
+    },
+    {
+        "id": 10,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/rg.jpg",
+        "title": "Виноград Red Glode",
+        "price": 96.0,
+        "count": 1
+    },
+    {
+        "id": 11,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/vinch.jpg",
+        "title": "Виноград черный",
+        "price": 112.0,
+        "count": 1
+    },
+    {
+        "id": 12,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/gra.jpg",
+        "title": "Гранат",
+        "price": 174.0,
+        "count": 1
+    },
+    {
+        "id": 13,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/vinzel.png",
+        "title": "Виноград Киш-Миш",
+        "price": 132.0,
+        "count": 1
+    },
+    {
+        "id": 14,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/greyp.jpg",
+        "title": "Грейпфрут",
+        "price": 79.0,
+        "count": 1
+    },
+    {
+        "id": 15,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/grsve.png",
+        "title": "Груша аббат",
+        "price": 105.0,
+        "count": 1
+    },
+    {
+        "id": 16,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/konf.jpg",
+        "title": "Груша конференция",
+        "price": 104.0,
+        "count": 1
+    },
+    {
+        "id": 17,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/komis.jpg",
+        "title": "Груша комис",
+        "price": 115.0,
+        "count": 1
+    },
+    {
+        "id": 18,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/melon22.jpg",
+        "title": "Дыня",
+        "price": 42.0,
+        "count": 1
+    },
+    {
+        "id": 19,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/qiwi.jpg",
+        "title": "Киви навал",
+        "price": 110.0,
+        "count": 1
+    },
+    {
+        "id": 20,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/klubnika.jpg",
+        "title": "Клубника",
+        "price": 220.0,
+        "count": 1
+    },
+    {
+        "id": 21,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/kokos.jpg",
+        "title": "Кокос",
+        "price": 83.0,
+        "count": 1
+    },
+    {
+        "id": 22,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/lime.jpg",
+        "title": "Лайм",
+        "price": 240.0,
+        "count": 1
+    },
+    {
+        "id": 23,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/limon.jpg",
+        "title": "Лимон",
+        "price": 114.0,
+        "count": 1
+    },
+    {
+        "id": 24,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/mango.png",
+        "title": "Манго",
+        "price": 240.0,
+        "count": 1
+    },
+    {
+        "id": 25,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/manda.jpg",
+        "title": "Мандарины",
+        "price": 80.0,
+        "count": 1
+    },
+    {
+        "id": 26,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/pomela.jpg",
+        "title": "Помело",
+        "price": 92.0,
+        "count": 1
+    },
+    {
+        "id": 27,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/sliva.jpg",
+        "title": "Слива",
+        "price": 64.0,
+        "count": 1
+    },
+    {
+        "id": 28,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/korolek.jpg",
+        "title": "Хурма королёк",
+        "price": 120.0,
+        "count": 1
+    },
+    {
+        "id": 29,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/ayda.jpg",
+        "title": "Яблоко",
+        "price": 73.0,
+        "count": 1
+    },
+    {
+        "id": 30,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/gloster.jpg",
+        "title": "Яблоки глостер",
+        "price": 89.0,
+        "count": 1
+    },
+    {
+        "id": 31,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/golden.jpg",
+        "title": "Яблоки голден",
+        "price": 86.0,
+        "count": 1
+    },
+    {
+        "id": 32,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/greni.jpg",
+        "title": "Яблоки грени",
+        "price": 91.0,
+        "count": 1
+    },
+    {
+        "id": 33,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/reddel.jpg",
+        "title": "Яблоки ред",
+        "price": 104.0,
+        "count": 1
+    },
+    {
+        "id": 34,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/rgala2.jpg",
+        "title": "Яблоки гала",
+        "price": 96.0,
+        "count": 1
+    },
+    {
+        "id": 35,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/applesv.jpg",
+        "title": "Яблоки свежие",
+        "price": 57.0,
+        "count": 1
+    },
+    {
+        "id": 36,
+        "img": "https://raw.githubusercontent.com/efrem005/json/master/responses/img/champ.jpg",
+        "title": "Яблоки чемпион",
+        "price": 74.0,
+        "count": 1
+    }
+]
