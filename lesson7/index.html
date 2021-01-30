@@ -27,9 +27,8 @@
       <div>
         <div class="btn-group mt-1 m-sm-0" role="group" aria-label="Button group with nested dropdown" id="viewShow">
           <div class="btn-group" role="group">
-<!--            <button id="btnGroupDrop" type="button" class="btn btn-success" :class="{show: isVisibleCart}" @click="viewCart">-->
-            <button id="btnGroupDrop" type="button" class="btn btn-success" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fad fa-shopping-cart"></i>
+            <button id="btnGroupDrop" type="button" class="btn btn-success" :class="{show: isVisibleCart}" @click="viewCart">
+              <i class="fad fa-shopping-cart"></i> Корзина
             </button>
             <ul class="dropdown-menu cartList p-1" aria-labelledby="btnGroupDrop" :class="{ show: isVisibleCart }">
               <ul class="p-0 text-center mb-1" id="cartList">
@@ -51,40 +50,10 @@
               </div>
             </ul>
           </div>
-
           <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Меню
-            </button>
-            <ul class="dropdown-menu dropdown-menu-start" style="min-width: 114px; left: -32px" aria-labelledby="btnGroupDrop1">
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson1">Урок №1</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson2">Урок №2</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson3">Урок №3</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson4">Урок №4</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson5">Урок №5</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson6">Урок №6</button>
-              </li>
-              <li>
-                <hr class="dropdown-divider"/>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson7" disabled>Урок №7</button>
-              </li>
-              <li>
-                  <button class="dropdown-item text-center" type="button" id="lesson8" disabled>Урок №8</button>
-              </li>
-            </ul>
+            <a type="button" class="btn btn-success" href="/log">
+              <i class="fad fa-box-check"></i> Log
+            </a>
           </div>
         </div>
       </div>
@@ -100,13 +69,7 @@
 
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/vue.js"></script>
-<script src="./lesson/index.js" async></script>
-<script src="./lesson1/index.js"></script>
-<script src="./lesson2/index.js"></script>
-<script src="./lesson2/humburger.js"></script>
-<script src="./lesson3/index.js"></script>
-<script src="./lesson4/index.js"></script>
-<script src="./lesson5/index.js"></script>
-<script src="./lesson6/index.js"></script>
+<script src="./js/index.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
