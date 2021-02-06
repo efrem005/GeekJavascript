@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>LOG ФАИЛ</title>
+</head>
+<body>
+<div id="root">
+    <div class="container">
+        <h2 class="text-center bg-info py-2">Log Фаил</h2>
+        <table class="table table-info table-hover text-center table-striped">
+            <thead>
+            <tr>
+                <th scope="col">дата</th>
+                <th scope="col">время</th>
+                <th scope="col">действие</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item in dataLog">
+                <td>{{ item.date }}</td>
+                <td>{{ item.time }}</td>
+                <td>{{ item.title }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+ new Vue({
+   el: '#root',
+   data: {
+     dataLog: []
+   },
+   methods: {
+     fetchGoods() {
+       const result = fetch('/logApi')
+       return result
+           .then(res => {
+             return res.json()
+           })
+           .then(res => {
+             return res
+           })
+           .catch(err => console.log(err));
+     },
+   },
+   mounted() {
+     /**
+      * запрос каталога
+      */
+     this.fetchGoods()
+         .then((log) => {
+           this.dataLog = log
+         })
+   }
+ })
+</script>
+</body>
+</html>

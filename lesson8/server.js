@@ -1,14 +1,17 @@
 const express = require('express')
+const path = require('path')
 const fs = require('fs')
 const format = require('node.date-time')
 const bodyParser = require('body-parser')
+
+// const __dirname = path.resolve()
 const app = express()
 const PORT = process.env.PORT || 3000
 
+app.use(express.static(path.resolve(__dirname, 'dist')))
 app.use(bodyParser.json());
-app.use(express.static('.'))
 
-app.get('/goods', (req, res) => {
+app.get('/goodsApi', (req, res) => {
     fs.readFile('./data/catalogData.json', 'utf-8', (err, data) => {
         if(!err){
             res.send(data)
@@ -37,7 +40,7 @@ app.post('/cart', (req, res) => {
         goods.push(item);
         fs.writeFile('./data/cart.json', JSON.stringify(goods), err => {
             if(!err){
-                res.json({res: true, 'title': `дата: ${logTime()} товар: ${item.title} был добавлен`});
+                res.json({'date': logTime('d-MM-Y'), 'time': logTime('hh:mm:SS'), 'title': `${item.title} был добавлен`});
             }
             else {
                 res.json({res: false, err});
@@ -67,7 +70,7 @@ app.put('/cart/:id', (req, res) => {
                         return '-1'
                     }
                 }
-                res.json({res: true, 'title': `дата: ${logTime()} товар: ${searchItem.title} изменён на ${logItem(par)}`});
+                res.json({'date': logTime('d-MM-Y'), 'time': logTime('hh:mm:SS'), 'title': `${searchItem.title} был изменён на ${logItem(par)}`});
             }
             else {
                 res.json({res: false, err});
@@ -82,7 +85,7 @@ app.delete('/cart/:id', (req, res) => {
         const goods = JSON.parse(data).filter(el => el.id != req.params.id)
         fs.writeFile('./data/cart.json', JSON.stringify(goods), err => {
             if(!err){
-                res.json({res: true, 'title': `дата: ${logTime()} товар: ${item.title} был удалён`});
+                res.json({'date': logTime('d-MM-Y'), 'time': logTime('hh:mm:SS'), 'title': `${item.title} был удалён`});
             }
             else {
                 res.json({res: false, err});
@@ -92,7 +95,7 @@ app.delete('/cart/:id', (req, res) => {
 })
 
 app.get('/log', (req, res) => {
-    fs.readFile('./data/status.json', 'utf-8', (err, data) => {
+    fs.readFile('./src/log.html', 'utf-8', (err, data) => {
         if(!err){
             res.send(data)
         }
@@ -107,6 +110,7 @@ app.post('/log', (req, res) => {
     fs.readFile('./data/status.json', 'utf-8', (err, data) => {
         const goods = JSON.parse(data);
         goods.push(item)
+        console.log(item)
         fs.writeFile('./data/status.json', JSON.stringify(goods), err => {
             if(!err){
                 res.json({res: true, log: 'Записан в фаил'});
@@ -118,10 +122,25 @@ app.post('/log', (req, res) => {
     })
 })
 
-function logTime() {
-    return new Date().format("d-MM-Y HH:MM:SS")
+app.get('/logApi', (req, res) => {
+    fs.readFile('./data/status.json', 'utf-8', (err, data) => {
+        if(!err){
+            res.send(data)
+        }
+        else {
+            res.send(JSON.stringify({}))
+        }
+    })
+})
+
+function logTime(text) {
+    /**
+     * "d-MM-Y hh:mm:SS"
+     */
+    const date = new Date().format(text)
+    return date
 }
 
 app.listen(PORT, () => {
-    console.log(`Server start on port ${PORT}`)
+    console.log(`сервер запушен на ${PORT} порту`)
 })
