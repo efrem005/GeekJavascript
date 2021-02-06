@@ -92,7 +92,7 @@ app.delete('/cart/:id', (req, res) => {
 })
 
 app.get('/log', (req, res) => {
-    fs.readFile('./data/stats.json', 'utf-8', (err, data) => {
+    fs.readFile('./data/status.json', 'utf-8', (err, data) => {
         if(!err){
             res.send(data)
         }
@@ -104,10 +104,10 @@ app.get('/log', (req, res) => {
 
 app.post('/log', (req, res) => {
     const item = req.body
-    fs.readFile('./data/stats.json', 'utf-8', (err, data) => {
+    fs.readFile('./data/status.json', 'utf-8', (err, data) => {
         const goods = JSON.parse(data);
         goods.push(item)
-        fs.writeFile('./data/stats.json', JSON.stringify(goods), err => {
+        fs.writeFile('./data/status.json', JSON.stringify(goods), err => {
             if(!err){
                 res.json({res: true, log: 'Записан в фаил'});
             }

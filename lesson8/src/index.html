@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <title>Javscript</title>
+</head>
+<body>
+<div id="app">
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="https://efrem005.github.io/GeekJavascript/index.html">
+      <img src="./img/logo.png" alt="logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" @click="viewMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-between text-sm-center text-end" :class="{show: isVisibleMenu}">
+      <ul class="navbar-nav" id="menuList">
+        <!-- menu list -->
+      </ul>
+      <div>
+        <div class="btn-group mt-1 m-sm-0" role="group" aria-label="Button group with nested dropdown" id="viewShow">
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop" type="button" class="btn btn-success" :class="{show: isVisibleCart}" @click="viewCart">
+              <i class="fad fa-shopping-cart"></i> Корзина
+            </button>
+            <ul class="dropdown-menu cartList p-1" aria-labelledby="btnGroupDrop" :class="{ show: isVisibleCart }">
+              <ul class="p-0 text-center mb-1" id="cartList">
+                <!-- cartBasket -->
+                <div class="card">
+                  <div class="card-body">
+                    Карзина пуста
+                  </div>
+                </div>
+                <!-- cartBasket -->
+              </ul>
+              <div class="p-0 text-center" id="cartPrice">
+                <!-- <div>Dropdown link</div> -->
+                <div class="card">
+                  <div class="card-body">
+                    Количество 0 цена 0 $
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="btn-group" role="group">
+            <a type="button" class="btn btn-success" href="/log">
+              <i class="fad fa-box-check"></i> Log
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="container py-3">
+  <div ></div>
+  <div class="row flex-column flex-sm-row align-items-center" id="mainList">
+    <!--mainList-->
+  </div>
+</main>
+</div>
+</body>
+</html>
